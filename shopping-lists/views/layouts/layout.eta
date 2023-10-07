@@ -4,7 +4,9 @@
     <title>Shared Shopping List!</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
@@ -15,7 +17,8 @@
             background: linear-gradient(#78c0a8, #4e79a7);
             display: flex;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
+            font-family: 'Roboto', sans-serif;
         }
 
         .container-box {
@@ -25,12 +28,20 @@
             min-height: 80vh;
             width: 500px;
             margin-top: 50px;
+            margin-bottom: 100px;
+            box-shadow: 10px 10px 10px #888888;
         }
 
-        div form {
-            display: inline;
+        .create-new-form {
+            margin-bottom: 20px;
+            border-radius: 5px;
         }
-        .item .item-action{
+
+        .create-action {
+
+        }
+
+        .list .list-action{
             position: absolute;
             right: 0;
             height: 100%;
@@ -40,15 +51,28 @@
             display: flex;
             align-items: center;
         }
-        .item .item-action input{
+        .list .list-action input{
             background: none !important;
             border: none !important;
             color: white;
         }
 
-        .item .item-action input:hover{
+        .list .list-action input:hover{
             color: #cec2c2;
         }
+        .list{
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
         .item {
             overflow: hidden;
             position: relative;
@@ -61,6 +85,19 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
+
+       h2 {
+           margin-top: 20px;
+       }
+
+        .create-new-form {
+        }
+
+        .create-action {
+
+        }
+
 
 
 

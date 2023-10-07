@@ -2,22 +2,35 @@
 
 <a href="/lists">Shopping lists</a>
 
-<h1> <%= it.list.name %></h1>
+<h2> <%= it.list.name %></h2>
 
-<h2>Add new item </h2>
+<br>
+<br>
+<h4>Add new item </h4>
 
+<div class="create-new-form">
 <form method="POST" action="/lists/<%= it.list.id %>/items">
-    <input type="text" name="name" placeholder="New item"/>
-    <input type="submit" value="Add" />
-</form>
 
+    <input type="text" name="name" placeholder="New item"/>
+    <div class="create-action btn btn-sm">
+    <input type="submit" value="Add" />
+    </div>
+</form>
+</div>
+
+
+<h4>Items to buy </h4>
 <ul>
     <% it.noncollected.forEach((i) => { %>
+    <div class="item">
         <li> <%= i.name %>
+            <div class="item-action btn btn-sm">
             <form method="POST" action="/lists/<%= it.list.id %>/items/<%= i.id %>/collect">
                 <input type="submit" value="Mark Collected!" />
             </form>
+            </div>
         </li>
+    </div>
     <% }); %>
 </ul>
 

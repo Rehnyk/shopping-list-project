@@ -2,24 +2,26 @@
 
 <a href="/">Main Page</a>
 
-<h1>Shopping Lists</h1>
+<h2>Shopping Lists</h2>
 
 <br>
 
-<h2>Create new list</h2>
+<h4>Create new list</h4>
 
+<div class="create-new-form">
 <form method="POST" action="/lists">
     <input type="text" name="name" placeholder="New list"/>
     <input type="submit" value="Create List!" />
 </form>
+</div>
 
 <br>
-<h2>Active shopping lists</h2>
+<h4 class="active-lists">Active shopping lists</h4>
 
 <% it.activeLists.forEach((l) => { %>
-    <div class="item">
+    <div class="list">
         <a href="/lists/<%= l.id %>"> <%= l.name %> </a>
-        <div class="item-action btn btn-sm">
+        <div class="list-action btn btn-sm">
             <form method="POST" action="/lists/<%= l.id %>/deactivate">
                 <input type="submit" value="Deactivate list!" />
             </form>
