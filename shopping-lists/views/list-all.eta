@@ -17,11 +17,13 @@
 <h2>Active shopping lists</h2>
 
 <% it.activeLists.forEach((l) => { %>
-    <div>
+    <div class="item">
         <a href="/lists/<%= l.id %>"> <%= l.name %> </a>
-        <form method="POST" action="/lists/<%= l.id %>/deactivate">
-            <input type="submit" value="Deactivate list!" />
-        </form>
+        <div class="item-action btn btn-sm">
+            <form method="POST" action="/lists/<%= l.id %>/deactivate">
+                <input type="submit" value="Deactivate list!" />
+            </form>
+        </div>
     </div>
 <% }); %>
 
