@@ -1,11 +1,14 @@
 <% layout('./layouts/layout.eta') %>
 
-<h1>Shared shopping list</h1>
-<br>
-<a href="/lists">Lists</a>
+<label class="page-title">Shared shopping list</label>
+
+<div class="main-page-lists">
+    <a href="/lists"><i class="fa-regular fa-rectangle-list"></i> Lists</a>
+</div>
 
 <br>
 <br>
+<div class="statistics-section">
 <label class="section-title">Statistics</label>
 
 <% if (it.lists === 0) { %>
@@ -14,6 +17,8 @@
     <div>Shopping lists: <%= it.lists %></div>
     <div>Shopping list items: <%= it.items %></div>
 <% } %>
+
+</div>
 
 
 

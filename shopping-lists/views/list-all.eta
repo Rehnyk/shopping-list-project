@@ -1,9 +1,10 @@
 <% layout('./layouts/layout.eta') %>
 
-<a href="/">Main Page</a>
+<div class="nav-link">
+    <a href="/"> Main Page</a>
+</div>
 
-<label class="page-title"><%= it.list.name %></label>
-<h2>Shopping Lists</h2>
+<label class="page-title">Shopping Lists</label>
 
 <label class="section-title">Create new list</label>
 
