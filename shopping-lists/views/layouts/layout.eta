@@ -16,7 +16,7 @@
     <style>
 
         body {
-            background: linear-gradient(#a63af6, #0b4cc0);
+            background: linear-gradient(#a12ff6, #0836ad);
             display: flex;
             justify-content: center;
             min-height: 100vh;
