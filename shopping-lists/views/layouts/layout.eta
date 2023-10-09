@@ -107,6 +107,7 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            padding-right: 135px;
         }
 
         .item {

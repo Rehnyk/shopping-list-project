@@ -3,8 +3,8 @@ import * as dbListSvc from "./dbServices/listService.js";
 
 
 /**** Switch between database or array based service ***/
- const implementor = arrayListSvc;
-// const implementor = dbListSvc;
+// const implementor = arrayListSvc;
+const implementor = dbListSvc;
 
 const createList = (...args) => implementor.createList(...args);
 const deactivateList = async (id) => implementor.deactivateList(id);

@@ -1,12 +1,10 @@
 let lists = [
-    { id: 1, name: 'cats', active: true },
-    { id: 2, name: 'dogs', active: true },
-    { id: 3, name: 'houses', active: true },
-    { id: 4, name: 'vegetables', active: true },
-    { id: 5, name: 'cars', active: true },
-    { id: 6, name: 'books', active: false },
-    { id: 7, name: 'mountains', active: true },
-    { id: 8, name: 'songs', active: true }
+    { id: 1, name: 'Fruits', active: true },
+    { id: 2, name: 'Vegetables', active: true },
+    { id: 3, name: 'Groceries', active: true },
+    { id: 4, name: 'Clothes', active: true },
+    { id: 5, name: 'Furniture', active: true },
+    { id: 6, name: 'Cars', active: true },
 ];
 
 
