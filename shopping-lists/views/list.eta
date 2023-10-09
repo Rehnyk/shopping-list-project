@@ -2,44 +2,38 @@
 
 <a href="/lists">Shopping lists</a>
 
-<h2> <%= it.list.name %></h2>
+<label class="page-title"><%= it.list.name %></label>
 
-<br>
-<br>
-<h4>Add new item </h4>
+<label class="section-title">Add new item </label>
 
-<div class="create-new-form">
-<form method="POST" action="/lists/<%= it.list.id %>/items">
-
-    <input type="text" name="name" placeholder="New item"/>
-    <div class="create-action btn btn-sm">
-    <input type="submit" value="Add" />
-    </div>
+<form class="form-group" method="POST" action="/lists/<%= it.list.id %>/items">
+    <label>
+        <input class="form-field" type="text" name="name" placeholder="New item"/>
+    </label>
+    <input class="form-action btn btn-sm"  type="submit" value="Add" />
 </form>
+
+<label class="section-title">Items to buy</label>
+<div class="row-group">
+    <% it.noncollected.forEach((i) => { %>
+        <div class="row">
+            <span> <%= i.name %> </span>
+            <div class="row-action btn btn-sm">
+                <form method="POST" action="/lists/<%= it.list.id %>/items/<%= i.id %>/collect">
+                    <input type="submit" value="Mark Collected!" />
+                </form>
+            </div>
+        </div>
+    <% }); %>
 </div>
 
-
-<h4>Items to buy </h4>
-<ul>
-    <% it.noncollected.forEach((i) => { %>
-    <div class="item">
-        <li> <%= i.name %>
-            <div class="item-action btn btn-sm">
-            <form method="POST" action="/lists/<%= it.list.id %>/items/<%= i.id %>/collect">
-                <input type="submit" value="Mark Collected!" />
-            </form>
+<div class="row-group collected">
+        <% it.collected.forEach((i) => { %>
+            <div class="row">
+                <span> <del><%= i.name %> </del> </span>
             </div>
-        </li>
-    </div>
-    <% }); %>
-</ul>
-
-
-<ul>
-    <% it.collected.forEach((i) => { %>
-        <li> <del><%= i.name %> </del></li>
-    <% }); %>
-</ul>
+        <% }); %>
+</div>
 
 
 

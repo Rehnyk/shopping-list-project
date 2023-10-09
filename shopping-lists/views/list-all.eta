@@ -2,32 +2,33 @@
 
 <a href="/">Main Page</a>
 
+<label class="page-title"><%= it.list.name %></label>
 <h2>Shopping Lists</h2>
 
-<br>
+<label class="section-title">Create new list</label>
 
-<h4>Create new list</h4>
-
-<div class="create-new-form">
-<form method="POST" action="/lists">
-    <input type="text" name="name" placeholder="New list"/>
-    <input type="submit" value="Create List!" />
+<form class="form-group" method="POST" action="/lists">
+    <label>
+        <input class="form-field" type="text" name="name" placeholder="New list"/>
+    </label>
+    <input class="form-action btn btn-sm" type="submit" value="Create List!" />
 </form>
+
+<label class="active-lists section-title">Active shopping lists</label>
+
+<div class="row-group">
+    <% it.activeLists.forEach((l) => { %>
+        <div class="row">
+            <a href="/lists/<%= l.id %>"> <%= l.name %> </a>
+            <div class="row-action btn btn-sm">
+                <form method="POST" action="/lists/<%= l.id %>/deactivate">
+                    <input type="submit" value="Deactivate list!" />
+                </form>
+            </div>
+        </div>
+    <% }); %>
 </div>
 
-<br>
-<h4 class="active-lists">Active shopping lists</h4>
-
-<% it.activeLists.forEach((l) => { %>
-    <div class="list">
-        <a href="/lists/<%= l.id %>"> <%= l.name %> </a>
-        <div class="list-action btn btn-sm">
-            <form method="POST" action="/lists/<%= l.id %>/deactivate">
-                <input type="submit" value="Deactivate list!" />
-            </form>
-        </div>
-    </div>
-<% }); %>
 
 
 

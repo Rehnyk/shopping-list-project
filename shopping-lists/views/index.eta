@@ -6,8 +6,7 @@
 
 <br>
 <br>
-
-<h2>Statistics</h2>
+<label class="section-title">Statistics</label>
 
 <% if (it.lists === 0) { %>
     <div>No shopping lists yet.</div>

@@ -27,7 +27,6 @@ let items = [
 ]
 
 const createItem = async (name, listId) => {
-    console.log("create item")
     const newId = items.reduce((maxId, item) => Math.max(maxId, item.id), 0) + 1;
     items.push({id: newId, referenceId: parseInt(listId), name, collected: false});
 };

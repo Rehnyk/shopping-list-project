@@ -3,8 +3,8 @@ import * as dbItemSvc from "./dbServices/itemService.js";
 
 
 /**** Switch between database or array based service ***/
-//const implementor = arrayItemSvc;
- const implementor = dbItemSvc;
+const implementor = arrayItemSvc;
+// const implementor = dbItemSvc;
 
 const createItem = (...args) => implementor.createItem(...args);
 
