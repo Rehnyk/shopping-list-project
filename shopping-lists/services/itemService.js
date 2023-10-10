@@ -2,7 +2,7 @@ import * as arrayItemSvc from "./arrayServices/itemService.js";
 import * as dbItemSvc from "./dbServices/itemService.js";
 
 
-/**** Switch between database or array based service ***/
+/**** Switch between database and array based service ***/
 //const implementor = arrayItemSvc;
 const implementor = dbItemSvc;
 
