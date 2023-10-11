@@ -1,6 +1,6 @@
 <% layout('./layouts/layout.eta') %>
 
-<label class="page-title">Shared shopping list</label>
+<label class="page-title">Shared Shopping List!</label>
 
 <div class="main-page-lists">
     <a href="/lists"><i class="fa-regular fa-rectangle-list"></i> Lists</a>
