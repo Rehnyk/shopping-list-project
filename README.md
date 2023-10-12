@@ -41,7 +41,7 @@ The application is placed in the shopping-list directory as root.
 In addition to that, project also uses:
 
 - **Database Migration:** Flyway (v9.11.0-alpine)
-- **End-to-End Tests:** Playwright (v1.38.0)
+- **End-to-End Tests:** Playwright (v1.39.0-focal)
 - **Deployment** Docker (v3.4)
 
 ---

@@ -22,7 +22,7 @@
             <span> <%= i.name %> </span>
             <div class="row-action btn btn-sm">
                 <form method="POST" action="/lists/<%= it.list.id %>/items/<%= i.id %>/collect">
-                    <input type="submit" value="Mark Collected!" />
+                    <input type="submit" value="Mark collected!" />
                 </form>
             </div>
         </div>

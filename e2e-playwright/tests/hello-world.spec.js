@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 
 test("Main page has expected title, lists link.", async ({ page }) => {
   await page.goto("/");
-  await expect(page).toHaveTitle("Shared Shopping List!");
+  await expect(page).toHaveTitle("Shared shopping lists");
   await expect(page.locator("a")).toHaveText("Lists");
 });
 
@@ -39,7 +39,7 @@ test("Can create an item.", async ({ page }) => {
 
 test('Can navigate to main page from lists page', async ({ page }) => {
   await page.goto('/lists');
-  await page.click('a:has-text("Main Page")');
+  await page.click('a:has-text("Main page")');
   const currentURL = page.url();
   const urlObj = new URL(currentURL);
   await expect(urlObj.pathname).toBe('/');

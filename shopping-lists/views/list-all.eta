@@ -1,7 +1,7 @@
 <% layout('./layouts/layout.eta') %>
 
 <div class="nav-link">
-    <a href="/"> Main Page</a>
+    <a href="/"> Main page</a>
 </div>
 
 <label class="page-title">Shopping Lists</label>
