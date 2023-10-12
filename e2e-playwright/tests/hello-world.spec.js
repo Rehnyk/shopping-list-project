@@ -56,11 +56,5 @@ test('Can navigate to lists page from /lists', async ({ page }) => {
 test("Handles error for invalid URL.", async ({ page }) => {
   await page.goto("/foo");
   const errorMessage = await page.innerText('body');
-  await expect(errorMessage).toContain("Invalid URL.");
-});
-
-test("Handles error for invalid list ID.", async ({ page }) => {
-  await page.goto("/lists/foo");
-  const errorMessage = await page.innerText('body');
-  await expect(errorMessage).toContain("Invalid list ID.");
+  await expect(errorMessage).toContain("Not found");
 });

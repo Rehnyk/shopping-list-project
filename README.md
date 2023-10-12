@@ -66,7 +66,7 @@ This container image was created for Ubuntu 23.04. For different operating syste
 use different image for Deno and Playwright. 
 
 - Open Dockerfile in shopping-lists folder and change first line from `FROM denoland/deno:alpine-1.37.0` to `FROM lukechannings/deno:v1.37.0` 
-- Open Dockerfile in e2e-playwright folder and change first line from `FROM mcr.microsoft.com/playwright:v1.38.0-focal` to `FROM mcr.microsoft.com/playwright:v1.38.0-vrt-arm64`
+- Open Dockerfile in e2e-playwright folder and change first line from `FROM mcr.microsoft.com/playwright:v1.39.0-focal` to `FROM mcr.microsoft.com/playwright:v1.39.0-vrt-arm64`
 
 ---
 ## Troubleshooting

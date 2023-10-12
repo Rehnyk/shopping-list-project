@@ -11,12 +11,12 @@
 <div class="statistics-section">
 <label class="section-title">Statistics</label>
 
-<% if (it.lists === 0) { %>
-    <div>No shopping lists yet.</div>
-<% } else { %>
-    <div>Shopping lists: <%= it.lists %></div>
-    <div>Shopping list items: <%= it.items %></div>
-<% } %>
+    <% if (parseInt(it.lists) === 0) { %>
+        <div>No shopping lists yet.</div>
+    <% } else { %>
+        <div>Shopping lists: <%= it.lists %></div>
+        <div>Shopping list items: <%= it.items %></div>
+    <% } %>
 
 </div>
 
