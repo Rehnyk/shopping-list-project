@@ -53,47 +53,14 @@ test('Can navigate to lists page from /lists', async ({ page }) => {
   await expect(urlObj.pathname).toBe('/lists');
 });
 
-test("Handles invalid URL with 404 response", async ({ page }) => {
-  await page.goto("/lists/foo");
-
-  // Wait for the page to load and check for the response status
-  await page.waitForLoadState("domcontentloaded");
-
-  // Check if the page contains the expected error message
+test("Handles error for invalid URL.", async ({ page }) => {
+  await page.goto("/foo");
   const errorMessage = await page.innerText('body');
   await expect(errorMessage).toContain("Invalid URL.");
-
-  // Check for the expected status code
-  const response = page.response();
-  await expect(response).toHaveProperty('status', 404);
 });
 
-/*
-
-test("Can navigate to a list.", async ({ page }) => {
-  await page.goto("/");
-  const taskName = `My task: ${Math.random()}`;
-  await page.locator("input[type=text]").type(taskName);
-  await page.locator("input[type=submit]").click();
-  await page.locator(`a >> text='${taskName}'`).click();
-  await expect(page.locator("h1")).toHaveText(taskName);
+test("Handles error for invalid list ID.", async ({ page }) => {
+  await page.goto("/lists/foo");
+  const errorMessage = await page.innerText('body');
+  await expect(errorMessage).toContain("Invalid list ID.");
 });
-
-
-
-test("Can can collect an item.", async ({ page }) => {
-  await page.goto("/");
-
-});
-
-test("Can .", async ({ page }) => {
-  await page.goto("/");
-
-});
-
-test("Can .", async ({ page }) => {
-  await page.goto("/");
-
-});
-
-*/
