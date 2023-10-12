@@ -1,10 +1,10 @@
-# Project 1: Shared shopping list
+# Shared shopping list
 
 This application is used for the creation and maintenance of shopping lists. Users can create new
 lists, deactivate lists, add items to lists, and mark items as collected. Basic statistics are
 also provided.
 
-### Views
+### Pages
 
 1. **Main Page:**
     - Contains links to the lists page and displays statistics on the number of created
@@ -18,6 +18,8 @@ Includes a navigational link to the main page.
 3. **Individual List Page:**
     - Shows all items created for a specific list. Users can add new items, and each item can 
 be marked as collected. Includes a navigational link to the lists page.
+
+---
 
 ## Application Structure and Technologies
 
@@ -33,13 +35,14 @@ The application is placed in the shopping-list directory as root.
 - **Runtime:** Deno
 - **Database:** PostgreSQL
 - **Views:** Eta
-- **Styling:** Eta Layout, Bootstrap (v4.5.2), Google Fonts, Font Awesome (v6.1.2)
+- **Styling:** Bootstrap (v4.5.2), Google Fonts, Font Awesome (v6.1.2)
 
 
 In addition to that, project also uses:
 
-- **Database Migration:** Flyway
-- **End-to-End Tests:** e2e-playwright
+- **Database Migration:** Flyway (v9.11.0-alpine)
+- **End-to-End Tests:** Playwright (v1.38.0)
+- **Deployment** Docker (v3.4)
 
 ---
 
@@ -57,12 +60,7 @@ The application utilizes Docker for local deployment. Follow these steps:
 
 
 
-
-### Troubleshooting
-
-There might be a few issues at first with starting a project. Here are few possible reasons and solutions:
-
-#### Different operating systems
+### OS Requirements
 
 This container image was created for Ubuntu 23.04. For different operating system like MacOs, you might need to
 use different image for Deno and Playwright. 
@@ -70,8 +68,12 @@ use different image for Deno and Playwright.
 - Open Dockerfile in shopping-lists folder and change first line from `FROM denoland/deno:alpine-1.37.0` to `FROM lukechannings/deno:v1.37.0` 
 - Open Dockerfile in e2e-playwright folder and change first line from `FROM mcr.microsoft.com/playwright:v1.38.0-focal` to `FROM mcr.microsoft.com/playwright:v1.38.0-vrt-arm64`
 
+---
+## Troubleshooting
 
-#### Container already in use
+There might be a few issues at first with starting a project. Here are few possible reasons and solutions:
+
+### Container already in use
 
 It is also possible that Docker is clashing with  previously build images and containers. If that's
 the case, here are few possible solutions:
@@ -109,7 +111,7 @@ PGDATABASE=database
 
 
 ---
-### Array Service
+## Array Service
 
 There two different implementations of the services. Initially, the application was developed with 
 arrays instead of a database. 
