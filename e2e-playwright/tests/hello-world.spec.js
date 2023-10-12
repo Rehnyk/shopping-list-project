@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 
 test("Main page has expected title, lists link.", async ({ page }) => {
   await page.goto("/");
-  await expect(page).toHaveTitle("Shared shopping lists");
+  await expect(page).toHaveTitle("Shared shopping list");
   await expect(page.locator("a")).toHaveText("Lists");
 });
 
