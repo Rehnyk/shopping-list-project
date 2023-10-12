@@ -1,6 +1,6 @@
 # Project 1: Shared shopping list
 
-This application simplifies the creation and maintenance of shopping lists. Users can create new
+This application is used for the creation and maintenance of shopping lists. Users can create new
 lists, deactivate lists, add items to lists, and mark items as collected. Basic statistics are
 also provided.
 
@@ -12,7 +12,7 @@ lists and items, including deactivated lists and collected items.
 
 2. **Lists Page:**
     - Allows the creation of new lists, displays all active lists, and provides the option to 
-deactivate lists. Clicking on a list name takes the user to the individual list page. 
+deactivate lists. Clicking on a list name takes user to the individual list page. 
 Includes a navigational link to the main page.
 
 3. **Individual List Page:**
@@ -31,11 +31,15 @@ The application is placed in the shopping-list directory as root.
 ### Technology Stack
 
 - **Runtime:** Deno
-- **Database Migration:** Flyway
-- **End-to-End Tests:** e2e-playwright
 - **Database:** PostgreSQL
 - **Views:** Eta
 - **Styling:** Eta Layout, Bootstrap (v4.5.2), Google Fonts, Font Awesome (v6.1.2)
+
+
+In addition to that, project also uses:
+
+- **Database Migration:** Flyway
+- **End-to-End Tests:** e2e-playwright
 
 ---
 
@@ -46,7 +50,7 @@ The application has been deployed to Render and can be viewed and tested at: [sh
 
 ### Running the application locally 
 
-The application utilizes Docker for local deployment.Follow these steps:
+The application utilizes Docker for local deployment. Follow these steps:
 
 1. Build the Docker image and start the container: `docker-compose up --build`.
 2. Access the application in your web browser: [http://localhost:7777](http://localhost:7777).
@@ -107,7 +111,7 @@ PGDATABASE=database
 ---
 ### Array Service
 
-Within the services, two implementations exist. Initially, the application was developed with 
+There two different implementations of the services. Initially, the application was developed with 
 arrays instead of a database. 
 
 ```
@@ -145,5 +149,5 @@ const implementor = dbListSvc;
 const implementor = dbItemSvc;
 ```
 
-To run the app without containers, use: `deno run --allow-net --allow-read --allow-env app.js`.
+To run the app without containers, navigate inside `shopping-lists` and use: `deno run --allow-net --allow-read --allow-env app.js`.
 
