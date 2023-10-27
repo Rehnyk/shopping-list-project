@@ -1,4 +1,4 @@
-# Shared shopping list
+# Shopping list app
 
 This application is used for the creation and maintenance of shopping lists. Users can create new
 lists, deactivate lists, add items to lists, and mark items as collected. Basic statistics are
