@@ -108,8 +108,6 @@ PGDATABASE=database
 ```
 
 
-
-
 ---
 ## Array Service
 
@@ -152,4 +150,3 @@ const implementor = dbItemSvc;
 ```
 
 To run the app without containers, navigate inside `shopping-lists` and use: `deno run --allow-net --allow-read --allow-env app.js`.
-
